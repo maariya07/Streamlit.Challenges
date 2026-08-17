@@ -1,0 +1,14 @@
+[project]
+name = "main-py2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Dejiaali", email = "maariyaali212@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "pyfiglet>=1.0.4",
+    "streamlit>=1.61.1",
+]
+
