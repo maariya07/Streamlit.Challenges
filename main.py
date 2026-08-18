@@ -1,25 +1,21 @@
 import streamlit as st
+left, center, right=st.columns([1,2,1])
+with center:
+    st.title ("Mahad's Shop")
+    with st.form(" The Receipt"):
+        costumer = st.text_input("Costumer")
+        st.text_input("Item")
+        quantity =st.number_input("Quantity", min_value= 0 , max_value= 500)
+        price =st.number_input("Price", min_value= 0 , max_value= 500)
+        submitted = st.form_submit_button("SUMBIT")
+        if submitted:
+            st.success("Receipt REady!")
+            st.write(f"Name: {costumer}")
+            Total = quantity * price
+            st.write (f" Quantity: {quantity}")
+        
+            st.write(f"Total:  {Total}")
 
-
-with st.form(" Registration"):
-    st.title(" Adnan's Travels")
-    st.write("Intercity buses, daily departure")
-    st.success(" Booking office 6am - 10pm")
-    passenger = st.text_input("passenger")
-    destination = st.text_input(" destination")
-    seat = st.radio("seat", ["Standard", "Premium"])
-   
-    extra = st.checkbox("Extra luggage")
-    
-
-    submitted = st.form_submit_button("Book")
-    if submitted:
-        st.success("Booking Confirmed!")
-        st.write(f" {passenger} , {destination}")
-        st.write(f"Seat:{seat} ")
-        if extra:
-            st.write(" Extra luggage: Yes")
-        else:
-            st.write(" Extra luggage: No")
+      
     
     
