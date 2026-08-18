@@ -11,4 +11,5 @@ dependencies = [
     "pyfiglet>=1.0.4",
     "streamlit>=1.61.1",
 ]
-
+[tool.poetry]
+package-mode = false 
